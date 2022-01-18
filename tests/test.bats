@@ -1,7 +1,7 @@
 setup() {
   export DIR="$( cd "$( dirname "$BATS_TEST_FILENAME" )" >/dev/null 2>&1 && pwd )/.."
-  export TESTDIR=$(mktemp -d -t testmemcached-XXXXXXXXXX)
-  export PROJNAME=testmemcached
+  export TESTDIR=$(mktemp -d -t testbeanstalkd-XXXXXXXXXX)
+  export PROJNAME=testbeanstalkd
   export DDEV_NON_INTERACTIVE=true
   ddev delete -Oy ${PROJNAME} || true
   cd "${TESTDIR}"
@@ -19,6 +19,6 @@ teardown() {
   cd ${TESTDIR}
   ddev service get ${DIR}
   ddev restart
-  v=$(ddev exec 'printf "version\nquit\nquit\n" | nc memcached 11211')
-  [[ "${v}" = VERSION* ]]
+#  v=$(ddev exec 'printf "version\nquit\nquit\n" | nc beanstalkd 11211')
+#  [[ "${v}" = VERSION* ]]
 }
