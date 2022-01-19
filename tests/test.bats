@@ -17,7 +17,7 @@ teardown() {
 
 @test "check basic installation" {
   cd ${TESTDIR}
-  ddev service get ${DIR}
+  ddev get ${DIR}
   ddev restart
   res=$(ddev exec 'printf "list-tubes\nquit\n" | nc -C beanstalkd 11300')
   [[ "${res}" = OK* ]]

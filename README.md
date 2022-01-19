@@ -2,11 +2,11 @@
 
 ## What is this?
 
-This repository allows you to quickly install [beanstalkd](https://beanstalkd.github.io/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev service get drud/ddev-beanstalkd`.
+This repository allows you to quickly install [beanstalkd](https://beanstalkd.github.io/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get drud/ddev-beanstalkd`.
 
 ## Installation
 
-1.`ddev service get drud/ddev-beanstalkd && ddev restart`
+1.`ddev get drud/ddev-beanstalkd && ddev restart`
 5. `ddev restart`
 
 ## Caveats
