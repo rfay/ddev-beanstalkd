@@ -61,7 +61,7 @@ jobs:
     - name: Download docker images
       run: | 
         mkdir junk && pushd junk && ddev config --auto && ddev debug download-images >/dev/null
-        docker pull beanstalkd:1.6 >/dev/null
+        docker pull schickling/beanstalkd >/dev/null
     - name: tmate debugging session
       uses: mxschmitt/action-tmate@v3
       with:
