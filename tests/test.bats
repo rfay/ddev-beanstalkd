@@ -15,10 +15,10 @@ teardown() {
   rm -rf ${TESTDIR}
 }
 
-@test "basic installation" {
+@test "check basic installation" {
   cd ${TESTDIR}
   ddev service get ${DIR}
   ddev restart
-#  v=$(ddev exec 'printf "version\nquit\nquit\n" | nc beanstalkd 11211')
-#  [[ "${v}" = VERSION* ]]
+  res=$(ddev exec 'printf "list-tubes\nquit\n" | nc -C beanstalkd 11300')
+  [[ "${res}" = OK* ]]
 }
