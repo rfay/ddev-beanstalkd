@@ -7,7 +7,6 @@ This repository allows you to quickly install [beanstalkd](https://beanstalkd.gi
 ## Installation
 
 1.`ddev get drud/ddev-beanstalkd && ddev restart`
-5. `ddev restart`
 
 ## Caveats
 
