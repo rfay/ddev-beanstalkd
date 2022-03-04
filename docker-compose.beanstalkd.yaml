@@ -5,7 +5,6 @@ services:
   beanstalkd:
     container_name: ddev-${DDEV_SITENAME}-beanstalkd
     image: schickling/beanstalkd
-    networks: [default, ddev_default]
     restart: "no"
     expose:
     - 11300 # beanstalkd is available at this port inside the container (default port for beanstalkd)
