@@ -1,7 +1,12 @@
 name: beanstalkd
 
 pre_install_actions:
-- 'if [ "$(arch)" = "arm64" -o "$(arch)" = "aarch64" ]; then echo "This package does not work on arm64 machines"; exit 1; fi'
+- |
+  #ddev-nodisplay
+  if [ "$(arch)" = "arm64" -o "$(arch)" = "aarch64" ]; then 
+    echo "This package does not work on arm64 machines"
+    exit 1
+  fi
 
 # files and directories listed here are copied into .ddev
 project_files:

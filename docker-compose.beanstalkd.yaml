@@ -1,5 +1,5 @@
 # ddev beanstalkd recipe file
-
+#ddev-generated
 version: '3.6'
 services:
   beanstalkd:
