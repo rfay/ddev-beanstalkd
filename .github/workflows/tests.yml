@@ -20,6 +20,8 @@ defaults:
 
 env:
   NIGHTLY_DDEV_PR_URL: "https://nightly.link/drud/ddev/actions/runs/1720215802/ddev-linux-amd64.zip"
+  # Allow ddev get to use a github token to prevent rate limiting by tests
+  DDEV_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   tests:
@@ -63,7 +65,7 @@ jobs:
         mv ddev /usr/local/bin/ddev && chmod +x /usr/local/bin/ddev
 
     - name: Download docker images
-      run: | 
+      run: |
         mkdir junk && pushd junk && ddev config --auto && ddev debug download-images >/dev/null
         docker pull schickling/beanstalkd >/dev/null
     - name: tmate debugging session
