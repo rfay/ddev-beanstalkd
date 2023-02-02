@@ -1,12 +1,12 @@
-[![tests](https://github.com/drud/ddev-beanstalkd/actions/workflows/tests.yml/badge.svg)](https://github.com/drud/ddev-beanstalkd/actions/workflows/tests.yml)
+[![tests](https://github.com/ddev/ddev-beanstalkd/actions/workflows/tests.yml/badge.svg)](https://github.com/ddev/ddev-beanstalkd/actions/workflows/tests.yml)
 
 ## What is this?
 
-This repository allows you to quickly install [beanstalkd](https://beanstalkd.github.io/) into a [Ddev](https://ddev.readthedocs.io) project using just `ddev get drud/ddev-beanstalkd`.
+This repository allows you to quickly install [beanstalkd](https://beanstalkd.github.io/) into a [DDEV](https://ddev.readthedocs.io) project using just `ddev get ddev/ddev-beanstalkd`.
 
 ## Installation
 
-1.`ddev get drud/ddev-beanstalkd && ddev restart`
+1.`ddev get ddev/ddev-beanstalkd && ddev restart`
 
 ## Caveats
 
