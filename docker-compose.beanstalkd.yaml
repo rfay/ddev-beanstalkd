@@ -1,6 +1,5 @@
 # ddev beanstalkd recipe file
 #ddev-generated
-version: '3.6'
 services:
   beanstalkd:
     container_name: ddev-${DDEV_SITENAME}-beanstalkd
