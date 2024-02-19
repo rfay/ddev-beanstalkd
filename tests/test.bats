@@ -4,13 +4,12 @@ setup() {
   export PROJNAME=testbeanstalkd
   export DDEV_NON_INTERACTIVE=true
   ddev delete -Oy ${PROJNAME} || true
-  mkdir "${TESTDIR}" && cd "${TESTDIR}"
+  mkdir -p "${TESTDIR}" && cd "${TESTDIR}"
   ddev config --project-name=${PROJNAME}
   ddev start -y
 }
 
 teardown() {
-  cd ${TESTDIR}
   ddev delete -Oy ${DDEV_SITENAME}
   rm -rf ${TESTDIR}
 }
