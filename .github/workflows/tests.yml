@@ -12,14 +12,15 @@ on:
       debug_enabled:
         description: 'Debug with tmate set "debug_enabled"'
         required: false
-        default: "false"
+        default: false
 
 defaults:
   run:
     shell: bash
 
+# Required permissions for keep-alive, used by ddev/github-action-add-on-test
 permissions:
-  contents: write
+  actions: write
 
 jobs:
   tests:
@@ -35,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: ddev/github-action-add-on-test@v1
+      - uses: ddev/github-action-add-on-test@v2
         with:
           ddev_version: ${{ matrix.ddev_version }}
           token: ${{ secrets.GITHUB_TOKEN }}
